@@ -1,8 +1,11 @@
 -- Initialize Sakila database
+-- The database 'sakila' is already created by docker-compose environment variable
+
+-- Use the sakila database
 USE sakila;
 
--- Source the schema file
+-- Load the schema
 SOURCE /docker-entrypoint-initdb.d/sakila-schema.sql;
 
--- Source the data file  
+-- Load the data
 SOURCE /docker-entrypoint-initdb.d/sakila-data.sql;
